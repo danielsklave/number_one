@@ -1,4 +1,4 @@
 # number_one
 noice
-sudoku
+sudoku  
 [commit sudoku here](https://danielsklave.github.io/number_one/public_html/)
