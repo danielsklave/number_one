@@ -2,53 +2,84 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
+  <title>Stuff</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script>function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
+
+$("a[href='#div']").click(function() {
+   scrollToAnchor('div');
+});</script>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
+<nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+<!--  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Me</a>
+      <a class="navbar-brand" href="#">HTML</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">WHO</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
+        <li><a href="#div">&lt;div&gt;</a></li>
+        <li><a href="#span">&lt;span&gt;</a></li>
+        <li><a href="#code">&lt;code&gt;</a></li>
       </ul>
     </div>
-  </div>
+  </div>-->
+ <a class="navbar-brand" href="#">HTML</a>
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+     <ul class="navbar-nav ml-auto">
+         <li class="nav-item"><a href="#div" class="nav-link">&lt;div&gt;</a></li>
+        <li class="nav-item"><a href="#span" class="nav-link"> &lt;span&gt;</a></li>
+        <li class="nav-item"><a href="#code" class="nav-link">&lt;code&gt;</a></li>
+      </ul>
+ </div>
 </nav>
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h3 class="margin">Who Am I?</h3>
-  <img src="bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm div</h3>
-  <p>The HTML Content Division element (div) is the generic container for flow content. It has no effect on the content or layout until styled using CSS.</p>
+    <a class="anchor" id="div"></a>
+  <h3 class="margin">What Am I?</h3>
+  <img src="images/div.png" class="img-fluid margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h3>I'm &lt;div&gt;</h3>
+  <p>The HTML Content Division element &lt;div&gt; is the generic container for flow content. It has no effect on the content or layout until styled using CSS.</p>
 </div>
 
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
+    <a class="anchor" id="span"></a>
   <h3 class="margin">What Am I?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </a>
+  <img src="images/span.png" class="img-fluid margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h3>I'm &lt;span&gt;</h3>
+  <p>The HTML &lt;span&gt; element is a generic inline container for phrasing content, which does not inherently represent anything. 
+          It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. 
+          It should be used only when no other semantic element is appropriate. &lt;span&gt; is very much like a &lt;div&gt; element, but &lt;div&gt; 
+          is a block-level element whereas a &lt;span&gt; is an inline element.</p>
+</div>
+
+<div class="container-fluid bg-5 text-center">
+    <a class="anchor" id="code"></a>
+  <h3 class="margin">What Am I?</h3>
+  <img src="images/code.png" class="img-fluid margin" style="display:inline" alt="Bird" width="500" height="350">
+  <h3>I'm &lt;code&gt;</h3>
+  <p>The HTML &lt;code&gt; element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the user agent's default monospace font.</p>
 </div>
 
 <!-- Third Container (Grid) -->
@@ -56,23 +87,23 @@
   <h3 class="margin">Where To Find Me?</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>You can't find me</p>
+      <img src="birds1.jpg" class="img-fluid margin" style="width:100%" alt="No Image">
     </div>
     <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>You can't find me</p>
+      <img src="birds2.jpg" class="img-fluid margin" style="width:100%" alt="No Image">
     </div>
     <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>You can't find me</p>
+      <img src="birds3.jpg" class="img-fluid margin" style="width:100%" alt="No Image">
     </div>
   </div>
 </div>
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+    <p>Bootstrap Theme Made By <strong>ME</strong></p> 
 </footer>
 
 </body>
