@@ -3,25 +3,98 @@ body {
     line-height: 1.8;
     color: #f5f6f7;
   }
+  .aaa{
+  position: relative;
+
+  width: 170px;
+  height: 40px;
+  transition: all .35s;
+  }
+
+  .aaa span{
+    transition: all .35s;
+  }
+
+  .success{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s;
+  }
+
+  .success svg{
+    width: 20px;
+    height: 20px;
+    fill: yellowgreen;
+    transform-origin: 50% 50%;
+    transform: translateY(-50%) rotate(0deg) scale(0);
+    transition: all .35s;
+  }
+
+  .aaa.is_active{
+    width: 40px;
+    height: 40px;
+  }
+
+  .aaa.is_active .success{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .aaa.is_active .success svg{
+    margin-top: 50%;
+    transform: translateY(-50%) rotate(720deg) scale(1);
+  }
+
+  .aaa.is_active span{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+.roll {
+    -webkit-animation-name: roll;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: 1;
+  }
+
+  @-webkit-keyframes roll {
+  from { -webkit-transform: rotate(0deg) }
+  to { -webkit-transform: rotate(360deg) }
+  }
+
+  @keyframes roll {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+  }
+  html{
+    scroll-behavior: smooth;
+  }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
-  .bg-1 { 
+  .bg-1 {
     background-color: #1abc9c; /* Green */
     color: #ffffff;
   }
-  .bg-2 { 
+  .bg-2 {
     background-color: #474e5d; /* Dark Blue */
     color: #ffffff;
   }
-  .bg-3 { 
+  .bg-3 {
     background-color: #ffffff; /* White */
     color: #555555;
   }
-  .bg-4 { 
+  .bg-4 {
     background-color: #2f2f2f; /* Black Gray */
     color: #fff;
   }
-  .bg-5 { 
+  .bg-5 {
     background-color: #2f2f2f; /* White */
     color: #ffffff;
   }

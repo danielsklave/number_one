@@ -10,36 +10,24 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script>function scrollToAnchor(aid){
-    var aTag = $("a[name='"+ aid +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-}
+  <script>
+  function doABarrelRoll(){
+  document.body.classList.toggle('roll');
+  setTimeout(function(){document.body.classList.toggle('roll'); }, 3000);
+  }
 
-$("a[href='#div']").click(function() {
-   scrollToAnchor('div');
-});</script>
+function active() {
+  var aaa = document.getElementById('aaa');
+  aaa.classList.toggle("is_active");
+  aaa.disabled = true;
+  setTimeout(function(){aaa.classList.toggle("is_active"); aaa.disabled = false; }, 3000);
+}
+</script>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
-<!--  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">HTML</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#div">&lt;div&gt;</a></li>
-        <li><a href="#span">&lt;span&gt;</a></li>
-        <li><a href="#code">&lt;code&gt;</a></li>
-      </ul>
-    </div>
-  </div>-->
  <a class="navbar-brand" href="#">HTML</a>
  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -68,9 +56,9 @@ $("a[href='#div']").click(function() {
   <h3 class="margin">What Am I?</h3>
   <img src="images/span.png" class="img-fluid margin" style="display:inline" alt="Bird" width="350" height="350">
   <h3>I'm &lt;span&gt;</h3>
-  <p>The HTML &lt;span&gt; element is a generic inline container for phrasing content, which does not inherently represent anything. 
-          It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. 
-          It should be used only when no other semantic element is appropriate. &lt;span&gt; is very much like a &lt;div&gt; element, but &lt;div&gt; 
+  <p>The HTML &lt;span&gt; element is a generic inline container for phrasing content, which does not inherently represent anything.
+          It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang.
+          It should be used only when no other semantic element is appropriate. &lt;span&gt; is very much like a &lt;div&gt; element, but &lt;div&gt;
           is a block-level element whereas a &lt;span&gt; is an inline element.</p>
 </div>
 
@@ -83,18 +71,26 @@ $("a[href='#div']").click(function() {
 </div>
 
 <!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
+<div class="container-fluid bg-3 text-center">
   <h3 class="margin">Where To Find Me?</h3><br>
   <div class="row">
     <div class="col-sm-4">
       <p>You can't find me</p>
-      <img src="birds1.jpg" class="img-fluid margin" style="width:100%" alt="No Image">
+      <button type="button" class="btn btn-outline-dark" onclick="doABarrelRoll()">Do a barrel roll</button>
     </div>
-    <div class="col-sm-4"> 
+    <div class="col-sm-4">
       <p>You can't find me</p>
-      <img src="birds2.jpg" class="img-fluid margin" style="width:100%" alt="No Image">
+      <button id="aaa" type="button" class="btn btn-outline-dark aaa" onclick="active()">
+          <span>Submit</span>
+          <div class="success">
+          <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
+
+      	<path d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z"/>
+       </svg>
+            </div>
+        </button>
     </div>
-    <div class="col-sm-4"> 
+    <div class="col-sm-4">
       <p>You can't find me</p>
       <img src="birds3.jpg" class="img-fluid margin" style="width:100%" alt="No Image">
     </div>
@@ -103,7 +99,7 @@ $("a[href='#div']").click(function() {
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-    <p>Bootstrap Theme Made By <strong>ME</strong></p> 
+    <p>Bootstrap Theme Made By <strong>ME</strong></p>
 </footer>
 
 </body>
