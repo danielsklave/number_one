@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="confetti.js"></script>
   <script>
   function doABarrelRoll(){
   document.body.classList.toggle('roll');
@@ -20,7 +21,8 @@ function active() {
   var aaa = document.getElementById('aaa');
   aaa.classList.toggle("is_active");
   aaa.disabled = true;
-  setTimeout(function(){aaa.classList.toggle("is_active"); aaa.disabled = false; }, 3000);
+  confetti.start();
+  setTimeout(function(){aaa.classList.toggle("is_active"); aaa.disabled = false; confetti.stop();}, 3000);
 }
 </script>
 </head>
